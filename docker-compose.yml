@@ -1,0 +1,12 @@
+version: '3'
+services:
+  fabric:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: fabric
+    container_name: fabric
+    command: sleep infinity
+    volumes:
+      - ./patterns:/app/patterns
+      - .env:/root/.config/fabric/.env
