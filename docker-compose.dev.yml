@@ -1,7 +1,10 @@
 version: '3'
 services:
   fabric:
-    image: ghcr.io/jonahlyn/fabric:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: fabric
     container_name: fabric
     command: sleep infinity
     volumes:
